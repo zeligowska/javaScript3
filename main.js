@@ -1,14 +1,8 @@
-// function ask() {
-//     const confirmation = confirm('wanna question?');
-//     if(confirmation) {
-//         var answer = prompt('how you doin?');
-//         answer += ' ' + prompt('still?');
-//         answer += ' ' + prompt('and now?');
-//         alert(answer);
-//     }
-// }
+var newUrl = prompt('podaj adres');
+//window.location = newUrl;
 
-// ask();
+if(newUrl.substr(0,8) !== 'https://' || newUrl.substr(0,8) !== 'http://') {
+    newUrl = 'https://' + newUrl;
+}
 
-
-open(prompt('podaj adres'));
+window.open(newUrl);
