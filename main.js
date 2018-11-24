@@ -1,8 +1,17 @@
-var newUrl = prompt('podaj adres');
-//window.location = newUrl;
+const elementById = document.getElementById('first');
+const elementsByClass = document.getElementsByClassName('second');
+const elementByQId = document.querySelector('#first');
+const elementByQClass = document.querySelector('.second');
+const elementsByQId = document.querySelectorAll('#first');
+const elementsByQClass = document.querySelectorAll('.second');
 
-if(newUrl.substr(0,8) !== 'https://' || newUrl.substr(0,8) !== 'http://') {
-    newUrl = 'https://' + newUrl;
-}
+const element = document.querySelector('div');
 
-window.open(newUrl);
+// console.log(elementById);
+// console.log(elementsByClass);
+// console.log(elementByQId);
+// console.log(elementByQClass);
+// console.log(elementsByQId);
+// console.log(elementsByQClass);
+console.log(element);
+console.log(element.firstElementChild);
