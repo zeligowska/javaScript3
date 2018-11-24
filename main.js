@@ -1,17 +1,21 @@
-const elementById = document.getElementById('first');
-const elementsByClass = document.getElementsByClassName('second');
-const elementByQId = document.querySelector('#first');
-const elementByQClass = document.querySelector('.second');
-const elementsByQId = document.querySelectorAll('#first');
-const elementsByQClass = document.querySelectorAll('.second');
 
-const element = document.querySelector('div');
+const btn = document.querySelector('.btn');
+btn.setAttribute('disabled', '');
+btn.setAttribute('id', 'button');
+btn.removeAttribute('disabled');
 
-// console.log(elementById);
-// console.log(elementsByClass);
-// console.log(elementByQId);
-// console.log(elementByQClass);
-// console.log(elementsByQId);
-// console.log(elementsByQClass);
-console.log(element);
-console.log(element.firstElementChild);
+const colors = ['red', 'blue', 'green', 'yellow', 'white'];
+
+var i = 0;
+
+function changeColors() {
+    btn.style.background = colors[i];
+    i++;
+    if(i === colors.length)
+        i = 0;
+}
+
+btn.addEventListener(
+    'click',
+    changeColors
+);
